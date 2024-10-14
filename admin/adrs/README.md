@@ -1,0 +1,1 @@
+admin/adrs should be created and will contain your design decisions as Architectural Decision Records (ADRs) using the [MADR](https://adr.github.io/madr/) format. 

@@ -1,0 +1,1 @@
+This directory contain items ranging from meeting notes to diagrams in MermaidJS or image format.
