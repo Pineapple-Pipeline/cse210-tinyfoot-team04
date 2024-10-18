@@ -1,0 +1,13 @@
+#footnote-container {
+    position: absolute;
+    border: 0.1rem solid #ccc;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    z-index: 1000;
+    display: none; /* initial */
+    /* using vw and vh to allow overflow */
+    max-width: 30vw;
+    max-height: 20vh;
+    overflow-y: auto;
+    position: fixed;
+}

@@ -4,26 +4,13 @@ class Footnotes {
         this.init();
     }
 
-
-
-
     init() {
         this.footnoteLinks.forEach(link => {
             link.addEventListener('click', (event) => this.toggleFootnote(event, link));
         });
 
-
         const footnoteContainer = document.createElement('div');
         footnoteContainer.id = 'footnote-container';
-        footnoteContainer.style.position = 'absolute';
-        footnoteContainer.style.border = '1px solid #ccc';
-        footnoteContainer.style.backgroundColor = '#f9f9f9';
-        footnoteContainer.style.padding = '10px';
-        footnoteContainer.style.zIndex = '1000';
-        footnoteContainer.style.display = 'none';
-
-        footnoteContainer.style.width = '200px';
-        footnoteContainer.style.overFlowY = 'auto';
 
         document.body.appendChild(footnoteContainer);
 
