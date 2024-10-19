@@ -27,7 +27,7 @@ class Footnotes {
         const footnoteText = document.querySelector(`#footnote-${footnoteId}`).innerHTML;
         const footnoteContainer = document.getElementById('footnote-container');
 
-        if (footnoteContainer.style.display === 'block' && footnoteContainer.innerHTML === footnoteText) {
+        if (footnoteContainer.style.display === 'block') {
             // Close the footnote if it's already open
             footnoteContainer.style.display = 'none';
             removeBlur()
