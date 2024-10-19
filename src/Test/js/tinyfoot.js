@@ -6,15 +6,15 @@ class Footnotes {
 
     init() {
         this.footnoteLinks.forEach(link => {
+            console.log('Adding click listener to:', link); // Debug log
             link.addEventListener('click', (event) => this.toggleFootnote(event, link));
         });
 
         const footnoteContainer = document.createElement('div');
         footnoteContainer.id = 'footnote-container';
-
         document.body.appendChild(footnoteContainer);
 
-        document.addEventListener('click', (event)=> {
+        document.addEventListener('click', (event) => {
             if (!event.target.closest('[data-footnote]') && !event.target.closest('#footnote-container')) {
                 footnoteContainer.style.display = 'none';
             }
@@ -22,6 +22,7 @@ class Footnotes {
     }
 
     toggleFootnote(event, link) {
+        console.log('Footnote clicked:', link); // Debug log
         event.preventDefault();
         const footnoteId = link.getAttribute('data-footnote');
         const footnoteText = document.querySelector(`#footnote-${footnoteId}`).innerHTML;

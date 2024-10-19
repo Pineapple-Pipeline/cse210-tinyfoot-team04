@@ -1,28 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Footnotes Example</title>
-    <link rel="stylesheet" href="../src/stylefeet.css">
+    <title>Pineapple Pipeline</title>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../src/tinyfoot.js"></script>
-    <style>
-        .footnote-link {
-            color: blue;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="../src/Test/css/main.css" />
 </head>
 
 <body>
-    <p>This is some text with a footnote <span class="footnote-link" data-footnote="1">[1]</span>. More text that supercedes the footnote here.</p>
-    <p>This is another text with a footnote <span class="footnote-link" data-footnote="2">[2]</span>.</p>
 
-    <div id="footnotes" style="display:none;">
-        <div id = "footnote-1">Footnote 1. This is a test footnote with text that can wrap around. This is a test footnote with text that can wrap around. This is a test footnote with text that can wrap around. This is a test footnote with text that can wrap around. </div>
-        <div id = "footnote-2">Footnote 2</div>
-    </div>
+    <!-- Header -->
+    <section id="header">
+        <div class="inner">
+            <img src="../src/Test/css/images/pineapple.png" alt="Pineapple" class="custom-icon">
+            <h1 class="header-title"><strong>Pineapple Pipeline</strong></h1>
+            <h2 class="header-description">We take our projects as seriously as we take our fruit salads—extra juicy and always ripe for success!</h2>
+            <p>Ready to slice through the web and serve up success that's sweeter than a pineapple on a summer day! 🍍</p>
+            <div class="actions">
+                <a href="#one" class="button">Discover the crowns</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Page -->
+    <section id="one" class="main style1">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+                    <header class="major">
+                        <h2>Meet our Team!</h2>
+                    </header>
+
+                    <p>Nikhil Gautham - The Pineapple Analyst <span class="footnote-link" data-footnote="1">[1]</span></p>
+                    <p>Tim Kraemer - The Pineapple Analyst <span class="footnote-link" data-footnote="2">[2]</span></p>
+                    <p>Adrian Layer - The Pineapple Analyst <span class="footnote-link" data-footnote="3">[3]</span></p>
+                    <p>Samayk Mehta - The Pineapple Analyst <span class="footnote-link" data-footnote="4">[4]</span></p>
+                    <p>Jake Norbie - The Pineapple Analyst <span class="footnote-link" data-footnote="5">[5]</span></p>
+                    <p>Anusha Ravichandran - The Pineapple Analyst <span class="footnote-link" data-footnote="6">[6]</span></p>
+                    <p>Yunhao Jiang - The Pineapple Analyst <span class="footnote-link" data-footnote="7">[7]</span></p>
+                    <p>Laura - The Pineapple Analyst <span class="footnote-link" data-footnote="8">[8]</span></p>
+                    <p>Hailey Li - The Pineapple Analyst <span class="footnote-link" data-footnote="9">[9]</span></p>
+
+                    <div id="footnotes" style="display:none;">
+                        <div id="footnote-1">Footnote 1: <br> “Just like a pineapple, I’m tough on the outside but sweet on the inside! I engineer solutions that are fresh and fruitful, ensuring our projects are always ripe for success.”</div>
+                        <div id="footnote-2">Footnote 2: <br> “I’m the tropical designer who adds zest to our projects! Like a splash of pineapple juice in a cocktail, I bring creativity and color to everything I do.”</div>
+                        <div id="footnote-3">Footnote 3: <br> “With a spiky exterior, I tackle challenges head-on. My strategic mindset helps us stay fresh and innovative, just like a perfectly ripe pineapple!”</div>
+                        <div id="footnote-4">Footnote 4: <br> “I’m the innovator who sweetens our ideas! Like a pineapple on a fruit salad, I add a unique twist to our projects, ensuring we stand out in the market.”</div>
+                        <div id="footnote-5">Footnote 5: <br> “As a pineapple project manager, I keep things organized and efficient. I slice through obstacles with precision, ensuring our team stays on track and delivers juicy results!”</div>
+                        <div id="footnote-6">Footnote 6: <br> “I’m the connector of our team, bringing people together like a pineapple does in a tropical fruit salad! I thrive on collaboration and creating a harmonious atmosphere.”</div>
+                        <div id="footnote-7">Footnote 7: <br> “Like the core of a pineapple, I’m the solid foundation of our data analysis. I dig deep to extract insights that drive our decisions and make our strategies fruitful.”</div>
+                        <div id="footnote-8">Footnote 8: <br> “I’m the innovator who stirs up creativity! Like a pineapple smoothie, I blend fresh ideas and teamwork to create deliciously successful projects.”</div>
+                        <div id="footnote-9">Footnote 9: <br> “As the visionary of our team, I look to the future with optimism! Just like the sweet surprise of a ripe pineapple, I bring unexpected ideas that elevate our work to new heights.”</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <ul class="footer-content">
+            <li>&copy; TEAM 4</li>
+            <li>Design: CSE 210</li>
+        </ul>
+    </section>
+
+    <script src="../src/Test/js/tinyfoot.js"></script>  
+
 </body>
-
 </html>

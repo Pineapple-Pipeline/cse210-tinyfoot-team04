@@ -1,0 +1,142 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #ebde8a;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	scroll-behavior: smooth; /* Enables smooth scrolling */
+	overflow-x: hidden;
+}
+
+#header {
+	text-align: center;
+	padding: 50px;
+	background-color: #ffebcd; /* Light golden background */
+	width: 80%;
+	height: 300px;
+	margin: 0 auto;
+	border-radius: 20px; /* Slightly rounded corners */
+	position: relative;
+	margin-bottom: 50px;
+	top: 30px;
+}
+
+.custom-icon {
+	width: 150px;
+	height: 150px;
+}
+
+.header-title {
+	font-size: 2rem;
+	margin: 10px 0;
+}
+
+.header-description {
+	font-size: 1.5rem;
+	color: #555;
+}
+
+.actions {
+	margin-top: 20px;
+}
+
+.button {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+}
+/* Centering the names */
+/* Centering the names */
+#one {
+	text-align: center;
+	flex: 1; /* Allows the main content to take available space */
+}
+
+.major h2 {
+	text-align: center;
+}
+
+/* Footer styles */
+#footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	width: 100vw;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.footer-content li {
+	list-style-type: none;
+}
+
+.button:hover {
+	background-color: #45a049;
+}
+.footnote-link {
+	color: rgb(12, 149, 15);
+	cursor: pointer;
+	text-decoration: underline;
+}
+#footnote-container {
+	position: absolute;
+	border: 0.1rem solid #ccc;
+	background-color: #f9f9f9;
+	padding: 1rem;
+	z-index: 1000;
+	display: none; /* initial */
+	max-width: 30vw;
+	max-height: 20vh;
+	overflow-y: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.header-title {
+		font-size: 1.5rem; /* Smaller title on smaller screens */
+	}
+
+	.header-description {
+		font-size: 1.2rem; /* Smaller description on smaller screens */
+	}
+
+	.custom-icon {
+		width: 100px; /* Smaller icon on smaller screens */
+		height: 100px; /* Smaller icon on smaller screens */
+	}
+
+	.button {
+		padding: 8px 16px; /* Smaller button size */
+	}
+
+	#header {
+		padding: 30px; /* Less padding on smaller screens */
+	}
+
+	#one {
+		padding: 20px; /* Add padding for smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.header-title {
+		font-size: 1.2rem; /* Even smaller title */
+	}
+
+	.header-description {
+		font-size: 1rem; /* Even smaller description */
+	}
+
+	.button {
+		padding: 6px 12px; /* Even smaller button size */
+	}
+}
