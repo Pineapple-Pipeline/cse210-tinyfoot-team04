@@ -6,7 +6,6 @@ class Footnotes {
 
     init() {
         this.footnoteLinks.forEach(link => {
-            console.log('Adding click listener to:', link); // Debug log
             link.addEventListener('click', (event) => this.toggleFootnote(event, link));
         });
 
@@ -23,22 +22,40 @@ class Footnotes {
     }
 
     toggleFootnote(event, link) {
-        console.log('Footnote clicked:', link); // Debug log
         event.preventDefault();
         const footnoteId = link.getAttribute('data-footnote');
         const footnoteText = document.querySelector(`#footnote-${footnoteId}`).innerHTML;
         const footnoteContainer = document.getElementById('footnote-container');
 
         if (footnoteContainer.style.display === 'block' && footnoteContainer.innerHTML === footnoteText) {
+            // Close the footnote if it's already open
             footnoteContainer.style.display = 'none';
             removeBlur()
         } else {
+            // Open the footnote
             footnoteContainer.innerHTML = footnoteText;
             const rect = link.getBoundingClientRect();
             footnoteContainer.style.left = `${rect.left + window.scrollX}px`;
             footnoteContainer.style.top = `${rect.bottom + window.scrollY}px`;
             footnoteContainer.style.display = 'block';
             applyBlur()
+
+            // add copy button
+            const copyButton = document.createElement('button');
+            copyButton.innerHTML = 'Copy';
+            copyButton.classList.add('copy-button');
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(footnoteText).then(() => {
+                    copyButton.innerHTML = 'Copied!';
+                    setTimeout(() => {
+                        copyButton.innerHTML = 'Copy';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            });            
+            footnoteContainer.appendChild(document.createElement('br'));
+            footnoteContainer.appendChild(copyButton);
         }
     }
 }
