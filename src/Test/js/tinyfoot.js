@@ -4,30 +4,17 @@ class Footnotes {
         this.init();
     }
 
-
-
-
     init() {
         this.footnoteLinks.forEach(link => {
+            console.log('Adding click listener to:', link); // Debug log
             link.addEventListener('click', (event) => this.toggleFootnote(event, link));
         });
 
-
         const footnoteContainer = document.createElement('div');
         footnoteContainer.id = 'footnote-container';
-        footnoteContainer.style.position = 'absolute';
-        footnoteContainer.style.border = '1px solid #ccc';
-        footnoteContainer.style.backgroundColor = '#f9f9f9';
-        footnoteContainer.style.padding = '10px';
-        footnoteContainer.style.zIndex = '1000';
-        footnoteContainer.style.display = 'none';
-
-        footnoteContainer.style.width = '200px';
-        footnoteContainer.style.overFlowY = 'auto';
-
         document.body.appendChild(footnoteContainer);
 
-        document.addEventListener('click', (event)=> {
+        document.addEventListener('click', (event) => {
             if (!event.target.closest('[data-footnote]') && !event.target.closest('#footnote-container')) {
                 footnoteContainer.style.display = 'none';
             }
@@ -35,6 +22,7 @@ class Footnotes {
     }
 
     toggleFootnote(event, link) {
+        console.log('Footnote clicked:', link); // Debug log
         event.preventDefault();
         const footnoteId = link.getAttribute('data-footnote');
         const footnoteText = document.querySelector(`#footnote-${footnoteId}`).innerHTML;
