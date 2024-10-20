@@ -118,3 +118,49 @@ Littlefoot is a well-maintained JavaScript library that uses TypeScript. It stan
 
 ## Conclusion
 Overall, littlefoot.js is a clean, modernized library that is well-structured and easy to use. However, the choice of TypeScript, extra tooling, and dependencies might be overkill for such a simple project. Simplifying the codebase, reducing reliance on external tools, and improving documentation would keep the library lightweight and easy to maintain.
+
+
+# Drag Functionality Documentation
+- **Functionality that we added on top of littlefoot**
+
+## Link to Demo
+[Littlefoot Test Page](https://pineapple-pipeline.github.io/littlefoot/test.html)
+
+## Overview
+
+This functionality enables users to drag and reposition footnote popovers within a web application, enhancing interactivity and user experience.
+
+## File Structure
+
+- **src/dom/drag.ts**: Contains the function to implement the drag behavior for the footnote popover.
+- **src/dom/footnote.ts**: Integrates the drag functionality, activating it when the footnote popover is opened.
+
+## Implementation Details
+
+### Drag Functionality (`drag.ts`)
+
+- **Function Purpose**: The `makeDraggable` function allows an HTML element (the footnote popover) to be dragged around the screen.
+  
+- **Key Features**:
+  - Listens for `mousedown`, `mousemove`, and `mouseup` events.
+  - Calculates the position changes based on mouse movements.
+  - Updates the position of the popover dynamically as the user drags it.
+  - Optionally adds and removes a CSS class during the drag to facilitate styling.
+
+### Activation in Footnotes (`footnote.ts`)
+
+- **Integration**: The drag functionality is activated within the `activate` method of the `footnoteActions` function.
+  
+- **Resetting Position**: Before the popover is shown, its position is reset to ensure that it starts at a default location when activated.
+  
+- **Repositioning Logic**: Calls the repositioning logic to ensure the popover appears correctly relative to the footnote button.
+
+## Functionality Flow
+
+1. **Mouse Down Event**: The drag process starts when the user presses the mouse button on the popover.
+2. **Mouse Move Event**: As the user moves the mouse while holding down the button, the popover's position is updated.
+3. **Mouse Up Event**: The drag process ends when the user releases the mouse button, finalizing the new position of the popover.
+
+## Conclusion
+
+This drag functionality significantly improves the usability of footnotes within your application, allowing users to customize their viewing experience. For any further modifications or enhancements, you can refer back to the corresponding files and functions.
